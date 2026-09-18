@@ -1,13 +1,11 @@
-/* Colores STT */
 :root {
-  --rojo-stt:    #e51b24;
-  --negro-stt:   #1e242b;
-  --blanco:      #ffffff;
-  --gris-claro:  #f4f5f7;
-  --gris-medio:  #8c9199;
-  --borde:       #dde1e7;
-  --exito:       #1b7f3a;
-  --alerta:      #f59e0b;
+  --rojo-stt: #e51b24;
+  --negro-stt: #1e242b;
+  --blanco: #ffffff;
+  --gris-claro: #f4f5f7;
+  --gris-medio: #8c9199;
+  --borde: #dde1e7;
+  --exito: #1b7f3a;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Poppins', sans-serif; background: var(--gris-claro); color: var(--negro-stt); }

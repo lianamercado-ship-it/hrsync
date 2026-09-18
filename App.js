@@ -18,7 +18,14 @@ export default function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  if (loading) return <Splash />;
+  if (loading) return (
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',background:'#1e242b'}}>
+      <div style={{textAlign:'center',color:'#fff'}}>
+        <div style={{fontSize:40,fontWeight:700,color:'#e51b24'}}>HRSync</div>
+        <div style={{fontSize:14,color:'#8c9199',marginTop:8}}>Cargando...</div>
+      </div>
+    </div>
+  );
 
   return (
     <BrowserRouter>
@@ -29,16 +36,5 @@ export default function App() {
         <Route path="/admin" element={session ? <Admin session={session} /> : <Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
-  );
-}
-
-function Splash() {
-  return (
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',background:'#1e242b'}}>
-      <div style={{textAlign:'center',color:'#fff'}}>
-        <div style={{fontSize:40,fontWeight:700,color:'#e51b24',letterSpacing:2}}>HRSync</div>
-        <div style={{fontSize:14,color:'#8c9199',marginTop:8}}>Cargando...</div>
-      </div>
-    </div>
   );
 }

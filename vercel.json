@@ -1,10 +1,6 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/build",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "build",
   "framework": "create-react-app",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "env": {
-    "REACT_APP_SUPABASE_URL": "https://lfvfwdmalamtnlrfsenf.supabase.co",
-    "REACT_APP_SUPABASE_KEY": "sb_publishable_s5FcnkCxXOqUMRCa8h-YlQ_fSnm2T1C"
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
