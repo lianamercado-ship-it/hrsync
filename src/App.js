@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Distribucion from './pages/Distribucion';
 import Admin from './pages/Admin';
+import CargaOvertime from './pages/CargaOvertime';
 
 export default function App() {
   const [session, setSession] = useState(null);
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/login" element={!session ? <Login /> : <Navigate to="/" />} />
         <Route path="/" element={session ? <Dashboard session={session} /> : <Navigate to="/login" />} />
         <Route path="/empresa/:id" element={session ? <Distribucion session={session} /> : <Navigate to="/login" />} />
+        <Route path="/empresa/:id/cargar" element={session ? <CargaOvertime session={session} /> : <Navigate to="/login" />} />
         <Route path="/admin" element={session ? <Admin session={session} /> : <Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
